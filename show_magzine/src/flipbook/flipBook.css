@@ -1,0 +1,158 @@
+
+/* flipBook.css - Styles for FlipBook Component */
+
+
+/* Variables */
+:root {
+    --background-color: #f9f9f9;
+    --button-color: #007bff;
+    --button-hover-color: #0056b3;
+    --modal-background-color: #ffffff;
+    --modal-border-color: #dddddd;
+    --text-color: #333333;
+    --icon-size-large: 3rem;
+    --icon-size-xlarge: 4rem;
+}
+
+/* Global Styles */
+.background-container {
+    background-color: var(--background-color);
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flipbook Styles */
+.centered-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* Share Modal */
+.share-modal {
+    background-color: var(--modal-background-color);
+    border: 1px solid var(--modal-border-color);
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    border-radius: 1rem;
+}
+
+.link{
+    border: 1px dashed black;
+    background-color: gray;
+    border-radius: 10px;
+    padding: 1px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Text and Icon Sizes */
+.icon-large {
+    font-size: var(--icon-size-large);
+}
+
+.icon-xlarge {
+    font-size: var(--icon-size-xlarge);
+}
+
+
+/* Navigation Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--button-color);
+}
+
+button:hover {
+    color: var(--button-hover-color);
+}
+
+
+
+/* ******************************* */
+
+/* Ensure the body does not show scrollbars when the flipbook is enlarged */
+body {
+    overflow: hidden; /* Use with caution; ensure it only applies in fullscreen mode */
+}
+
+
+
+.bottom-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    background-color: #b6b4b4;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.page-nav-button {
+    color: black;
+    border: none;
+    border-radius: 5px; /* Slight rounding of corners for a modern look */
+    cursor: pointer;
+    font-size: 5px; /* Adjust font size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-nav-button:hover {
+    background-color: var(--button-hover-color);
+    color: white;
+}
+.page-number {
+    font-size: 20px; /* Larger font size for better readability */
+    color: var(--text-color);
+    font-weight: bold; /* Make the page number stand out */
+    align-self: center;
+}
+
+/* Ensure the navigation buttons are not too large on smaller screens */
+@media (max-width: 768px) {
+    .page-nav-button {
+        font-size: 14px;
+    }
+    
+    .page-number {
+        font-size: 12px;
+    }
+    .share-modal{
+        margin-left: 35%;
+        margin-bottom: 44%;
+    }
+}
+
+
+/* Optional: Add custom scrollbars for the flipbook content if needed
+.flipbook-content {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--button-color) var(--background-color);
+}
+
+.flipbook-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.flipbook-content::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+.flipbook-content::-webkit-scrollbar-thumb {
+    background-color: var(--button-color);
+    border-radius: 20px;
+    border: 3px solid var(--background-color);
+} */
